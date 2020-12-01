@@ -16,3 +16,8 @@ def comprime_image(input_image):
         picture.save(input_image,optimize=True,quality=30)
         size = image_weight(input_image)        
     return input_image
+
+def save_img_tmp(image):
+    img = Image.open(image)
+    img.save('data/tmp/to_check.png')
+    comprime_image('data/tmp/to_check.png')
