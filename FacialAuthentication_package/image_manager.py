@@ -21,3 +21,10 @@ def save_img_tmp(image):
     img = Image.open(image)
     img.save('data/tmp/to_check.png')
     comprime_image('data/tmp/to_check.png')
+    
+def check_img_format(image):
+    file, ext = os.path.splitext(image)## Divide the path of the variable image ex: "test.jpg" into file ("test") and ext (".jpg")
+    if ext!=".jpg":
+        print("The file format is wrong try to use a .jpg one")
+        return false
+    return true
